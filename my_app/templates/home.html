@@ -1,0 +1,78 @@
+{% extends 'footer.html' %}
+{% load static%}
+
+
+{%block content %}
+
+        <div class="container" id="before">
+        <h2>Emmanuel Opany</h2>
+        
+        </div>
+        
+      <div class="container" id="one">
+        <section id="me">
+            <h2></h2>
+
+            <img src="{% static 'images/django.jpg' %}">
+            <img src="{%static 'images/image_2.jpg' %}">
+
+            
+        
+    
+            
+        </section>
+        <section id="you">
+            <h2></h2>
+        </section>
+        
+        
+      </div>
+      <div class="row" id="row">  
+      <div class="leftcolumn">
+        <section id="four"></section>
+        <section id="extra"></section>
+        
+      </div>
+      <div class="rightcolumn">
+        <section id="five"></section>
+      </div>
+      </div>
+
+      {%for car in Cars%}
+            
+      {{car.first_name}}
+      {{car.last_name}}
+
+      {%endfor%}
+
+      {%for house in house%}
+      {{house.address}}
+      {{house.price}}
+      {%endfor%}
+
+
+
+
+
+<div class="container">
+
+  
+  <div class="product-grid">
+    <h3>My school is Strathmore</h3>
+    <p>kellogs</p>
+    {%for x in products %}
+    <img src= "{{x.image}}" alt="{{x.name}}">
+    <p> {{x.name}} </p>
+    <p> {{x.original_price}} </p>
+    <p> {{x.discounted_price}} </p>
+    <p> {{x.discount_percentage}} </p>
+    
+  </div>
+
+
+
+
+</div>
+
+
+{% endblock %}
